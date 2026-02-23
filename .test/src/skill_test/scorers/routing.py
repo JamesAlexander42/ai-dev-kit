@@ -43,7 +43,7 @@ SKILL_TRIGGERS = {
         "dashboard app",
         "data app",
     ],
-    "asset-bundles": ["dabs", "databricks asset bundle", "deploy", "bundle.yaml"],
+    "databricks-asset-bundles": ["dabs", "databricks asset bundle", "deploy", "bundle.yaml"],
     "databricks-python-sdk": [
         "python sdk",
         "databricks-sdk",
@@ -66,7 +66,7 @@ SKILL_TRIGGERS = {
         "genai.evaluate",
         "llm judge",
     ],
-    "agent-bricks": [
+    "databricks-agent-bricks": [
         "agent brick",
         "knowledge assistant",
         "genie",
@@ -74,7 +74,7 @@ SKILL_TRIGGERS = {
         "supervisor",
     ],
     "lakebase-provisioned": ["lakebase", "postgresql", "postgres"],
-    "model-serving": ["model serving", "serving endpoint", "inference endpoint"],
+    "databricks-model-serving": ["model serving", "serving endpoint", "inference endpoint"],
 }
 
 

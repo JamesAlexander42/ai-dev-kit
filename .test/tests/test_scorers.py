@@ -34,16 +34,16 @@ class TestDetectSkillsFromPrompt:
         assert "databricks-python-sdk" in skills
 
     def test_detect_asset_bundles(self):
-        """Test detection of asset-bundles skill."""
+        """Test detection of databricks-asset-bundles skill."""
         prompt = "Create a databricks asset bundle for deployment"
         skills = detect_skills_from_prompt(prompt)
-        assert "asset-bundles" in skills
+        assert "databricks-asset-bundles" in skills
 
     def test_detect_dabs(self):
         """Test detection via DABs keyword."""
         prompt = "Set up DABs for my pipeline"
         skills = detect_skills_from_prompt(prompt)
-        assert "asset-bundles" in skills
+        assert "databricks-asset-bundles" in skills
 
     def test_detect_mlflow_evaluation(self):
         """Test detection of mlflow-evaluation skill."""
@@ -58,16 +58,16 @@ class TestDetectSkillsFromPrompt:
         assert "synthetic-data-generation" in skills
 
     def test_detect_agent_bricks(self):
-        """Test detection of agent-bricks skill."""
+        """Test detection of databricks-agent-bricks skill."""
         prompt = "Create a knowledge assistant for my documents"
         skills = detect_skills_from_prompt(prompt)
-        assert "agent-bricks" in skills
+        assert "databricks-agent-bricks" in skills
 
     def test_detect_genie(self):
         """Test detection via Genie keyword."""
         prompt = "Build a Genie space for data exploration"
         skills = detect_skills_from_prompt(prompt)
-        assert "agent-bricks" in skills
+        assert "databricks-agent-bricks" in skills
 
     def test_detect_app_python_streamlit(self):
         """Test detection of databricks-app-python via Streamlit."""
@@ -124,17 +124,17 @@ class TestDetectSkillsFromPrompt:
         assert "lakebase-provisioned" in skills
 
     def test_detect_model_serving(self):
-        """Test detection of model-serving skill."""
+        """Test detection of databricks-model-serving skill."""
         prompt = "Query a model serving endpoint"
         skills = detect_skills_from_prompt(prompt)
-        assert "model-serving" in skills
+        assert "databricks-model-serving" in skills
 
     def test_detect_multi_skill(self):
         """Test detection of multiple skills."""
         prompt = "Create streaming tables and deploy with DABs"
         skills = detect_skills_from_prompt(prompt)
         assert "spark-declarative-pipelines" in skills
-        assert "asset-bundles" in skills
+        assert "databricks-asset-bundles" in skills
 
     def test_detect_multi_app_lakebase(self):
         """Test detection of app + lakebase."""
@@ -148,7 +148,7 @@ class TestDetectSkillsFromPrompt:
         prompt = "Build a Gradio app that queries a model serving endpoint"
         skills = detect_skills_from_prompt(prompt)
         assert "databricks-app-python" in skills
-        assert "model-serving" in skills
+        assert "databricks-model-serving" in skills
 
     def test_detect_no_match(self):
         """Test no skills detected for unrelated prompt."""
@@ -172,14 +172,14 @@ class TestSkillTriggers:
             "spark-declarative-pipelines",
             "databricks-app-apx",
             "databricks-app-python",
-            "asset-bundles",
+            "databricks-asset-bundles",
             "databricks-python-sdk",
             "databricks-jobs",
             "synthetic-data-generation",
             "mlflow-evaluation",
-            "agent-bricks",
+            "databricks-agent-bricks",
             "lakebase-provisioned",
-            "model-serving",
+            "databricks-model-serving",
         ]
         for skill in expected_skills:
             assert skill in SKILL_TRIGGERS

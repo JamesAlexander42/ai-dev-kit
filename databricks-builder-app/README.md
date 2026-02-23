@@ -173,7 +173,7 @@ Skills provide specialized guidance for Databricks development tasks. They are m
 3. The agent can invoke skills using the `Skill` tool: `skill: "sdp"`
 
 Skills include:
-- **asset-bundles**: Databricks Asset Bundles configuration
+- **databricks-asset-bundles**: Databricks Asset Bundles configuration
 - **databricks-app-apx**: Full-stack apps with APX framework (FastAPI + React)
 - **databricks-app-python**: Python apps with Dash, Streamlit, Flask
 - **databricks-python-sdk**: Python SDK patterns
@@ -585,7 +585,7 @@ env:
 
   # Skills to enable (comma-separated)
   - name: ENABLED_SKILLS
-    value: "agent-bricks,databricks-python-sdk,spark-declarative-pipelines"
+    value: "databricks-agent-bricks,databricks-python-sdk,spark-declarative-pipelines"
 
   # MLflow tracing (optional)
   - name: MLFLOW_TRACKING_URI
